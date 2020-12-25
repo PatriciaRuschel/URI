@@ -1,0 +1,15 @@
+using System;
+using System.Globalization;
+
+namespace ConsoleApp5
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Double R = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            Double Area = 3.14159 * (Math.Pow(R, 2));
+            Console.WriteLine("A=" + Area.ToString("F4"), CultureInfo.InvariantCulture);
+        }
+    }
+}
