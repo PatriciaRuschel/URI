@@ -1,0 +1,21 @@
+using System;
+using System.Globalization;
+namespace ConsoleApp10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            String[] Peca1 = Console.ReadLine().Split(' ');
+            String[] Peca2 = Console.ReadLine().Split(' ');
+            int CodPeca1 = int.Parse(Peca1[0]);
+            int NumPeca1 = int.Parse(Peca1[1]);
+            Double ValorPeca1 = double.Parse(Peca1[2], CultureInfo.InvariantCulture);
+            int CodPeca2 = int.Parse(Peca2[0]);
+            int NumPeca2 = int.Parse(Peca2[1]);
+            Double ValorPeca2 = double.Parse(Peca2[2], CultureInfo.InvariantCulture);
+            Double Total = NumPeca1 * ValorPeca1 + NumPeca2 * ValorPeca2;
+            Console.WriteLine("VALOR A PAGAR: R$ " +Total.ToString("F2", CultureInfo.InvariantCulture));
+        }
+    }
+}
