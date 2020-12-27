@@ -1,0 +1,18 @@
+using System;
+using System.Globalization;
+
+namespace ConsoleApp9
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int NumF = int.Parse(Console.ReadLine());
+            int HorasT = int.Parse(Console.ReadLine());
+            double ValorHora = double.Parse(Console.ReadLine(), CultureInfo.InvariantCulture);
+            double salary = HorasT * ValorHora;
+            Console.WriteLine("NUMBER = " + NumF);
+            Console.WriteLine("SALARY = U$ " + (salary).ToString("F2"));
+        }
+    }
+}
